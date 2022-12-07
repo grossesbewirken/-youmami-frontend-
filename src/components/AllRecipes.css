@@ -1,0 +1,5 @@
+.allRecipesField{
+    height: 580px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
