@@ -1,0 +1,22 @@
+.flex{
+    display: flex;
+}
+
+.colum{
+    flex-direction: column;
+}
+
+.m-top{
+    margin-top: 2rem;
+}
+.right{
+    justify-content: end;
+}
+
+.required{
+    color: red;
+}
+
+input{
+    
+}
