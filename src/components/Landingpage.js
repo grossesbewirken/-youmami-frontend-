@@ -2,7 +2,7 @@ import React from "react";
 import "./Landingpage.css";
 
 const Landingpage = ({recipesData}) => {
-  const recipe = recipesData[1]
+  const recipe = recipesData[[recipesData.length-1]]
   return (
     <div className="landing-card">
       <h1>Welcome</h1>
@@ -14,6 +14,7 @@ const Landingpage = ({recipesData}) => {
           <p className="Beschreibung">{recipe.description}</p>
           <button className="collapsible">+</button>
         </div>
+        <h1>TEST</h1>
     </div>
   );
 };

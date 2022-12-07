@@ -17,7 +17,8 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-const OneRecipeSmall = ({recipe, lastOne }) => {
+const OneRecipeSmall = ({recipe}) => {
+  console.log(recipe);
     return (
       <>
         <div className="description">
