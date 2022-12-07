@@ -1,14 +1,31 @@
 import "./Navigation.css";
+import { Link } from "react-router-dom";
+import Search from "./Search.js";
 
-function Navigation() {
+function Navbar() {
   return (
     <>
-      <div>
-        <img src="" alt="" />
+      <div className="Logo">
+        <Link to="/">
+          {" "}
+          <img src="" alt="Logo" />
+        </Link>
       </div>
-      <nav></nav>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/all-recipes"> All Recipes </Link>
+          </li>
+          <li>
+            <Link to="/new-recipes"> </Link>New Recipes
+          </li>
+          <li>
+            <Search placeholder="search" list={["pasta", "pizza"]} />
+          </li>
+        </ul>
+      </nav>
     </>
   );
 }
 
-export default Navigation;
+export default Navbar;
