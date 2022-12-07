@@ -1,9 +1,9 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
 function Search({ placeholder, list, uniqueId }) {
 const [inputValue, setInputValue] = useState("");
 return (
-  <Fragment>
+  <>
     <input
       placeholder={placeholder || "select item"}
       list="opts"
@@ -17,8 +17,10 @@ return (
         </option>
       ))}
     </datalist>
-  </Fragment>
+  </>
 );
 }
 
 export default Search;
+
+// der use-state ist zu tief. derzeit durchsuchen wir NUR 

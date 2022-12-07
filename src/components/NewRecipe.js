@@ -26,7 +26,7 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
   return (
     <form onSubmit={handleSubmit}>
       <div class="flex colum">
-        <label for="name">name<span class="required">*</span></label>
+        <label for="name">name<span className="required">*</span></label>
         <input 
           name="name"
           type="text"
@@ -35,7 +35,7 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
           />
       </div>
 
-      <div class="flex colum m-top">
+      <div className="flex colum m-top">
         <label for="img">image</label>
         <input
           name="img"
@@ -45,18 +45,18 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
         />
       </div>
 
-      <div class="flex colum m-top">
-        <label for="description">description<span class="required">*</span></label>
+      <div className="flex colum m-top">
+        <label for="description">description<span className="required">*</span></label>
         <input 
-          name="description"
+          nameName="description"
           type="text"
           placeholder="Describe your recipe" 
           onChange={onChangeHandler}
         />
       </div>
 
-      <div class="flex colum m-top">
-        <label for="ingredients">ingredients<span class="required">*</span></label>
+      <div className="flex colum m-top">
+        <label for="ingredients">ingredients<span className="required">*</span></label>
         <input 
           name="ingredients"
           type="text"
@@ -65,8 +65,8 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
         />
       </div>
 
-      <div class="flex colum m-top">
-        <label for="preparation">preparation<span class="required">*</span></label>
+      <div className="flex colum m-top">
+        <label for="preparation">preparation<span className="required">*</span></label>
         <input 
           name="preparation"
           type="text" 
@@ -75,7 +75,7 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
           />
       </div>
 
-      <div class="flex m-top right">
+      <div className="flex m-top right">
         <div>
           <img src="" alt="send" />
           <button type="submit">send</button>
