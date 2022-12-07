@@ -89,5 +89,5 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
     </form>
   )
 }
-  
+
 export default NewRecipes;
