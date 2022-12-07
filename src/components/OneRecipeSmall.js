@@ -17,21 +17,16 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-
-//
-
-const OneRecipeSmall = () => {
+const OneRecipeSmall = ({recipe, lastOne }) => {
     return (
       <>
-
         <div className="description">
-          <h1 class="rezept">rezeptname</h1>
-          <img src="" alt="tomatensuppe" />
-          <h3>description</h3>
-          <p class="Beschreibung">content description</p>
-          <button class="collapsible">+</button>
+          <h1 className="rezept">{recipe.name}</h1>
+          <img src={recipe.img} alt={recipe.name} />
+          <h3>{recipe.description}</h3>
+          <p className="Beschreibung">{recipe.description}</p>
+          <button className="collapsible">+</button>
         </div>
-
       </>
     );
   }
