@@ -35,30 +35,35 @@ function App() {
 
   return (
   <BrowserRouter>
-  <Suspense fallback={<p>Loading...</p>}>
-  <Navigation 
-      recipesData={recipesData}
-  />
-    <Routes>
-    <Route path="*" element={<Navigate to="/"/>}/>
-      <Route path="/" element={<Landingpage 
-      recipesData={recipesData}
-      />}/>
-      <Route path="/all-recipes" element={<AllRecipes 
-      recipesData={recipesData}
-      />} />
-      <Route path="/new-recipes" element={<NewRecipes 
-      isChanged={isChanged}
-      setIsChanged={setIsChanged}
-      />} />
-      <Route path="/one-recipes" element={<OneRecipeBig />} />
-      <Route path="/one-recipes" element={<OneRecipeSmall />} />
-      {/* <Route path="/navigation" element={<Navigation 
-      isChanged={isChanged}
-      setRecipesData={setRecipesData}
-      // />} /> */}
-    </Routes>
-  </Suspense>
+
+  <div className="bg">
+    <div className="phone">
+      <Suspense fallback={<p>Loading...</p>}>
+      <Navigation 
+          recipesData={recipesData}
+      />
+        <Routes>
+        <Route path="*" element={<Navigate to="/"/>}/>
+          <Route path="/" element={<Landingpage 
+          recipesData={recipesData}
+          />}/>
+          <Route path="/all-recipes" element={<AllRecipes 
+          recipesData={recipesData}
+          />} />
+          <Route path="/new-recipes" element={<NewRecipes 
+          isChanged={isChanged}
+          setIsChanged={setIsChanged}
+          />} />
+          <Route path="/one-recipes" element={<OneRecipeBig />} />
+          <Route path="/one-recipes" element={<OneRecipeSmall />} />
+          {/* <Route path="/navigation" element={<Navigation 
+          isChanged={isChanged}
+          setRecipesData={setRecipesData}
+          // />} /> */}
+        </Routes>
+      </Suspense>
+    </div>
+  </div>
   </BrowserRouter>
   );
 }

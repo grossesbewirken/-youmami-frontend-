@@ -5,8 +5,11 @@ const Landingpage = ({recipesData}) => {
   const recipe = recipesData[1]
   return (
     <div className="landing-card">
-      <h1>Welcome</h1>
-      <h2>to rezep.de</h2>
+      <div className="center">
+        <h1>Are you hungry</h1>
+        <h3>get inspired</h3>
+      </div>
+
 
       {recipe && <div className="description">
           <h1 className="rezept">{recipe.name}</h1>

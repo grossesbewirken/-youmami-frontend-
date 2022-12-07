@@ -5,25 +5,31 @@ import Search from "./Search.js";
 function Navbar({ recipesData }) {
   return (
     <>
-      <div className="Logo">
+    <div className="navbar">
+
+      <div className="Logo middle">
         <Link to="/">
           {" "}
           <img src="" alt="Logo" />
         </Link>
       </div>
+
       <nav>
         <ul>
           <li>
-            <Link to="/all-recipes"> All Recipes </Link>
+            <Link to="/all-recipes">show all </Link>
           </li>
           <li>
-            <Link to="/new-recipes">New Recipes</Link>
+            <Link to="/new-recipes">add new</Link>
           </li>
-          <li>
-            <Search placeholder="search" list={["pasta", "pizza"]} />
+          <li >
+            <Search
+              placeholder="search" 
+              list={["pasta", "pizza"]} />
           </li>
         </ul>
       </nav>
+    </div>
     </>
   );
 }
