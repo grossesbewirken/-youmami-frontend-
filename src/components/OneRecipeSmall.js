@@ -30,9 +30,12 @@ const OneRecipeSmall = ({recipe}) => {
           <h2 className="rezept">{recipe.name}</h2>
           <img src={recipe.img} alt={recipe.name} />
           <p className="Beschreibung">{recipe.description}</p>
-          <button>
-            <Link to="/one-recipe-big">+</Link>
-          </button>
+          
+          <div className="flex m-top right">
+            <Link to="/one-recipe-big"><button>+</button></Link>
+
+          </div>
+
         </div>
       </>
     );

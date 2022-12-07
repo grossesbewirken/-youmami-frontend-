@@ -30,8 +30,8 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
   
   return (
     <form onSubmit={handleSubmit}>
-      <h1>Share your taste!</h1>
-      <h3>Create a new receipe</h3>
+      <h1>Create a recipe</h1>
+      <h3>Share your taste!</h3>
       <div class="flex colum">
         <label for="name">name<span className="required">*</span></label>
         <input

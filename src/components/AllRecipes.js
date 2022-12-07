@@ -1,8 +1,9 @@
 import OneRecipeSmall from "./OneRecipeSmall.js";
+import "./AllRecipes.css"
 
 function AllRecipes({recipesData}) {
   return (
-    <>
+    <div className="allRecipesField">
       <h1>Get inspired</h1>
       <h3>See all recipes</h3>
       {recipesData && recipesData.map((recipe, i) => 
@@ -11,7 +12,7 @@ function AllRecipes({recipesData}) {
       key={i}
       />)
       )}
-    </>
+    </div>
 
   );
 }

@@ -50,12 +50,11 @@
     justify-content: end;
 }
 .center{
-    border: 1px solid greenyellow;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 600px
+    height: 280px;
 }
 
 button{
@@ -76,11 +75,11 @@ h1{
 h3{
     text-align: center;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 label{
     margin-left: 12px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     font-size: 0.8rem;
 }
