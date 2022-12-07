@@ -1,22 +1,11 @@
-.flex{
-    display: flex;
+.newInput{
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid grey;
 }
 
-.colum{
-    flex-direction: column;
-}
-
-.m-top{
-    margin-top: 2rem;
-}
-.right{
-    justify-content: end;
-}
 
 .required{
     color: red;
-}
-
-input{
-    
+    font-size: 0.9rem;
 }

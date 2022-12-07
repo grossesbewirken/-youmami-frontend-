@@ -1,6 +1,11 @@
 // I M P O R T:  E X T E R N A L  D E P E N D E N C I E S
 import { useState } from 'react';
 
+
+// I M P O R T - S T Y L I N G
+import "./NewRecipe.css"
+
+
 // I M P O R T:  F I L E S  &  F U N C T I O N S
 
 const NewRecipes = ({isChanged, setIsChanged}) => {
@@ -25,9 +30,12 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
   
   return (
     <form onSubmit={handleSubmit}>
+      <h1>Share your taste!</h1>
+      <h3>Create a new receipe</h3>
       <div class="flex colum">
-        <label for="name">name<span class="required">*</span></label>
-        <input 
+        <label for="name">name<span className="required">*</span></label>
+        <input
+          className="newInput"
           name="name"
           type="text"
           placeholder="your recipes name"
@@ -35,9 +43,10 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
           />
       </div>
 
-      <div class="flex colum m-top">
+      <div className="flex colum m-top">
         <label for="img">image</label>
         <input
+          className="newInput"
           name="img"
           type="text" 
           placeholder="insert your link here"
@@ -45,19 +54,21 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
         />
       </div>
 
-      <div class="flex colum m-top">
-        <label for="description">description<span class="required">*</span></label>
-        <input 
-          name="description"
+      <div className="flex colum m-top">
+        <label for="description">description<span className="required">*</span></label>
+        <input
+          className="newInput"
+          nameName="description"
           type="text"
           placeholder="Describe your recipe" 
           onChange={onChangeHandler}
         />
       </div>
 
-      <div class="flex colum m-top">
-        <label for="ingredients">ingredients<span class="required">*</span></label>
-        <input 
+      <div className="flex colum m-top">
+        <label for="ingredients">ingredients<span className="required">*</span></label>
+        <input
+          className="newInput"
           name="ingredients"
           type="text"
           placeholder="What do we need?"
@@ -65,9 +76,10 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
         />
       </div>
 
-      <div class="flex colum m-top">
-        <label for="preparation">preparation<span class="required">*</span></label>
-        <input 
+      <div className="flex colum m-top">
+        <label for="preparation">preparation<span className="required">*</span></label>
+        <input
+          className="newInput"
           name="preparation"
           type="text" 
           placeholder="This is how we do it!"
@@ -75,7 +87,7 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
           />
       </div>
 
-      <div class="flex m-top right">
+      <div className="flex m-top right">
         <div>
           <img src="" alt="send" />
           <button type="submit">send</button>

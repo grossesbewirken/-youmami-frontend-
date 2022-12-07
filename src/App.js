@@ -16,8 +16,8 @@ const OneRecipeSmall  = lazy(() => import("./components/OneRecipeSmall.js"))
 const Navigation = lazy(() => import("./components/Navigation.js"));
 
 function App() {
-  const [isChanged, setIsChanged] = useState(false);
-  const [recipesData, setRecipesData] = useState([{}]);
+     const [isChanged, setIsChanged] = useState(false);
+  const [recipesData, setRecipesData] = useState([{}]); 
 
   useEffect(() => {
     fetch("http://localhost:9876/recipes")
@@ -35,33 +35,37 @@ function App() {
 
   return (
   <BrowserRouter>
-  <Suspense fallback={<p>Loading...</p>}>
-  <Navigation 
-      recipesData={recipesData}
-  />
-    <Routes>
-    <Route path="*" element={<Navigate to="/"/>}/>
-      <Route path="/" element={<Landingpage 
-      recipesData={recipesData}
-      />}/>
-      <Route path="/all-recipes" element={<AllRecipes 
-      recipesData={recipesData}
-      />} />
-      <Route path="/new-recipes" element={<NewRecipes 
-      isChanged={isChanged}
-      setIsChanged={setIsChanged}
-      />} />
-      <Route path="/one-recipes" element={<OneRecipeBig />} />
-      <Route path="/one-recipes" element={<OneRecipeSmall />} />
-      {/* <Route path="/navigation" element={<Navigation 
-      isChanged={isChanged}
-      setRecipesData={setRecipesData}
-      // />} /> */}
-    </Routes>
-  </Suspense>
+
+  <div className="bg">
+    <div className="phone">
+      <Suspense fallback={<p>Loading...</p>}>
+      <Navigation 
+          recipesData={recipesData}
+      />
+        <Routes>
+        <Route path="*" element={<Navigate to="/"/>}/>
+          <Route path="/" element={<Landingpage 
+          recipesData={recipesData}
+          />}/>
+          <Route path="/all-recipes" element={<AllRecipes 
+          recipesData={recipesData}
+          />} />
+          <Route path="/new-recipes" element={<NewRecipes 
+          isChanged={isChanged}
+          setIsChanged={setIsChanged}
+          />} />
+          <Route path="/one-recipes" element={<OneRecipeBig />} />
+          <Route path="/one-recipes" element={<OneRecipeSmall />} />
+          {/* <Route path="/navigation" element={<Navigation 
+          isChanged={isChanged}
+          setRecipesData={setRecipesData}
+          // />} /> */}
+        </Routes>
+      </Suspense>
+    </div>
+  </div>
   </BrowserRouter>
   );
 }
 
 export default App;
-
