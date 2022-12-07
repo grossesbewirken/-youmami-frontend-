@@ -17,7 +17,7 @@ function Navbar() {
             <Link to="/all-recipes"> All Recipes </Link>
           </li>
           <li>
-            <Link to="/new-recipes"> </Link>New Recipes
+            <Link to="/new-recipes"> New Recipes</Link>
           </li>
           <li>
             <Search placeholder="search" list={["pasta", "pizza"]} />
