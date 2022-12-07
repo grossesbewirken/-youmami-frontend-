@@ -1,0 +1,14 @@
+p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+img{
+    width: 360px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 0.5rem
+}
+

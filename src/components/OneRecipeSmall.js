@@ -1,7 +1,12 @@
-import "./OneRecipe.css"
+import { BrowserRouter, Routes, Route, Navigate, Link } from "react-router-dom";
+
+// I M P O R T - S T Y L I N G
+import "./OneRecipeSmall.css"
 
 
 // C O L L A P S E - U M S T Y L E R ???
+
+
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -22,11 +27,12 @@ const OneRecipeSmall = ({recipe}) => {
     return (
       <>
         <div className="description">
-          <h1 className="rezept">{recipe.name}</h1>
+          <h2 className="rezept">{recipe.name}</h2>
           <img src={recipe.img} alt={recipe.name} />
-          <h3>{recipe.description}</h3>
           <p className="Beschreibung">{recipe.description}</p>
-          <button className="collapsible">+</button>
+          <button>
+            <Link to="/one-recipe-big">+</Link>
+          </button>
         </div>
       </>
     );
