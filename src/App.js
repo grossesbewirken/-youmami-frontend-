@@ -10,7 +10,7 @@ import Navigation from "./nav/Navigation.js";
 const Landingpage = lazy(() => import("./components/Landingpage.js"));
 const NewRecipes = lazy(() => import("./components/NewRecipe.js"));
 const AllRecipes = lazy(() => import("./components/AllRecipes.js"));
-const OneRecipes = lazy(() => import("./components/OneRecipe.js"));
+const OneRecipe = lazy(() => import("./components/OneRecipe.js"));
 const Navigation = lazy(() => import("./nav/Navigation.js"));
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           <Route path="/" element={<Landingpage />} />
           <Route path="/all-recipes" element={<AllRecipes />} />
           <Route path="/new-recipes" element={<NewRecipes />} />
-          <Route path="/one-recipes" element={<OneRecipes />} />
+          <Route path="/one-recipes" element={<OneRecipe />} />
           <Route path="/navigation" element={<Navigation />} />
         </Routes>
       </Suspense>
