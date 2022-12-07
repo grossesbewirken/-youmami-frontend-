@@ -4,6 +4,7 @@ import Landingpage from "./components/Landingpage.js";
 import AllRecipes from "./components/AllRecipes.js";
 import NewRecipes from "./components/NewRecipe.js";
 import OneRecipes from "./components/OneRecipe.js";
+import Navigation from "./nav/Navigation.js";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <Route path="/" element={<AllRecipes />} />
         <Route path="/" element={<NewRecipes />} />
         <Route path="/" element={<OneRecipes />} />
+        <Route path="/" element={<OneRecipes />} />
+        <Route path="/" element={<Navigation />} />
       </Routes>
     </Router>
   );
