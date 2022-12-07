@@ -1,5 +1,5 @@
 // I M P O R T:  E X T E R N A L  D E P E N D E N C I E S
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // I M P O R T:  F I L E S  &  F U N C T I O N S
 
@@ -32,7 +32,6 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
           type="text"
           placeholder="your recipes name"
           onChange={onChangeHandler}
-
           />
       </div>
 

@@ -2,7 +2,7 @@ import "./Navigation.css";
 import { Link } from "react-router-dom";
 import Search from "./Search.js";
 
-function Navbar() {
+function Navbar({ recipesData }) {
   return (
     <>
       <div className="Logo">
@@ -17,7 +17,7 @@ function Navbar() {
             <Link to="/all-recipes"> All Recipes </Link>
           </li>
           <li>
-            <Link to="/new-recipes"> New Recipes</Link>
+            <Link to="/new-recipes">New Recipes</Link>
           </li>
           <li>
             <Search placeholder="search" list={["pasta", "pizza"]} />
