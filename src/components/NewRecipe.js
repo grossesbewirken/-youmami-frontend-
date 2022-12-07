@@ -52,5 +52,5 @@ const NewRecipes = () => {
     </form>
   )
 }
-  
+
 export default NewRecipes;

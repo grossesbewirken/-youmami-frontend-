@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  font-size: 15px;
+  text-align: center;
+}
+.active, .collapsible:hover {
+  background-color: rgb(54, 57, 54);
+  box-shadow: inset 1px 3px 5px black;
+}
+.content {
+  text-align: center;
+  padding: 0 18px;
+  display: none;
+  /* height: 100vh; */
+  background: grey;
+  color: black;
+}
+.text{
+  text-align: center;
+}
+.ram{
+  border: solid;
+}
+img{
+  height: 150px;
+}
+</style>
+</head>
+<body>
+<div class="ram">
+  <p class="rezept">Tomatensuppe</p>
+<img src="https://images.eatsmarter.de/sites/default/files/styles/576x432/public/tomatensuppe-herstellen-333075.jpg" alt="tomatensuppe">
+<p class="Beschreibung">Beschreibung</p>
+    <button class="collapsible">Vorbereitung</button>
+  <div class="content">
+      <p class="text">HIER STEHT DER TEXT MIT DEN SACHEN DIE MAN MACHEN MUSS UND SO!!!!!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi corporis est consequatur temporibus! Accusamus saepe aut laboriosam atque reprehenderit earum officia molestiae accusantium, quibusdam fuga assumenda nesciunt, tenetur ducimus quas ipsum commodi, dignissimos porro? Facere rem impedit magni dolor? Distinctio excepturi, molestias commodi perferendis rem quae, dicta laborum sint officiis quia autem magnam quo eum aut fuga. In voluptas harum magnam quae sed inventore itaque ipsam sapiente at autem quia, deleniti dolor iste, voluptatum, provident quo accusamus. Officia, atque excepturi nisi repudiandae iste necessitatibus optio eveniet laborum, iusto amet dolores quaerat. Ad sint consequuntur dicta voluptatum facilis enim quia illum quidem distinctio aspernatur!
+      </p>
+    </div>
+    <button type="button" class="collapsible">Zutaten</button>
+<div class="content">
+  <p class="text">
+    hier steht der Text<br>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, nostrum odit debitis maxime, voluptatibus enim est eos nihil corrupti modi, praesentium commodi assumenda necessitatibus? Sint, officiis facilis. Doloribus est minima a? Perspiciatis perferendis optio laudantium nisi ullam a ab? Possimus sapiente aliquid enim! Facilis, sit atque commodi quisquam maxime eveniet laboriosam accusamus necessitatibus reprehenderit ducimus nostrum ipsam aliquam inventore eligendi architecto tempore deleniti explicabo eos ab voluptates, fugiat quos. Reiciendis error quidem enim facere, veritatis sapiente dignissimos excepturi officia ab! Nam odio quis cum iusto ullam dignissimos amet voluptatem autem repellat provident, aliquam ipsam molestias fugit sunt dolorum perferendis! Explicabo!
+  </p>
+  </ul>
+</div>
+<button>open</button>
+<button>close</button>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
