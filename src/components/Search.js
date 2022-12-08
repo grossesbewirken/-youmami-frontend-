@@ -1,16 +1,26 @@
 // import { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 // S T Y L I N G
 import "./Search.css"
 
+
+// I M P O R T   F O N T A W E S O M E
+import { GrAddCircle } from 'react-icons/gr';
+import { TbSend } from 'react-icons/tb'
+import { HiMagnifyingGlass } from "react-icons/hi"
+import { AiOutlineCloseCircle } from "react-icons/ai"
+import { GiFireworkRockete } from "react-icons/gi"
+
+
 function Search({ placeholder, list, uniqueId, searchedRecipe, setSearchedRecipe, setLastSearchedRecipe }) {
+
   
 return (
-    <div className="searchField-small">
+    <div >
       <input
-        placeholder="search recipe"
-        // list="opts"
+        className="searchField-small newInput"
         value={searchedRecipe}
         onChange={(e) => setSearchedRecipe(e.target.value)}
       />
@@ -20,7 +30,7 @@ return (
         onClick={(e) => {
           setLastSearchedRecipe(searchedRecipe)
         }}
-        >search</button>      
+        > search</button>      
       </Link>
       {/* <datalist id="opts">
         {list.map((item, index) => (

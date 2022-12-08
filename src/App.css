@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 .bg{
     width: 100vw;
     height: 100vh;
@@ -69,7 +67,7 @@ button{
 
 .youmami{
     font-family: 'Hurricane', cursive;
-    font-size: 3rem;
+    font-size: 3.5rem;
     transform: rotate(-12deg);
     margin-top: -5px;
     margin-bottom: 10px;
@@ -88,7 +86,7 @@ h3{
 
 label{
     margin-left: 12px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     font-size: 0.8rem;
 }
 

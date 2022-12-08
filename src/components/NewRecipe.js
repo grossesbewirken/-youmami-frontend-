@@ -88,7 +88,7 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
 
       <div className="flex colum m-top">
         <label className="preparation">preparation<span className="required">*</span></label>
-        <input
+        <textarea
           className="newInput"
           name="preparation"
           type="text" 
