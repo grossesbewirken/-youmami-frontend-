@@ -58,8 +58,8 @@ const OneRecipeBig = () => {
 
 
         <div className="options">
-          <Link to="/one-recipe-big"><button>open</button></Link>
-          <Link to="/all-recipes"><button>close</button></Link>
+          <Link to="/one-recipe-big">{ <TbSend/> }</Link>
+          <Link to="/all-recipes">{ <AiOutlineCloseCircle/> }</Link>
         </div>
 
 

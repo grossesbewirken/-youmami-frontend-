@@ -9,7 +9,7 @@ import { GrAddCircle } from 'react-icons/gr';
 import { TbSend } from 'react-icons/tb'
 import { HiMagnifyingGlass } from "react-icons/hi"
 import { AiOutlineCloseCircle } from "react-icons/ai"
-import { GiFireworkRockete } from "react-icons/gi"
+import { GiFireworkRocket } from "react-icons/gi"
 
 
 
