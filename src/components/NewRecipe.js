@@ -55,7 +55,7 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
 
       <div className="flex colum m-top">
         <label className="img">image</label>
-        <input
+        <textarea
           className="newInput"
           name="img"
           type="text" 
@@ -66,7 +66,7 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
 
       <div className="flex colum m-top">
         <label className="description">description<span className="required">*</span></label>
-        <input
+        <textarea
           className="newInput"
           name="description"
           type="text"
@@ -77,8 +77,8 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
 
       <div className="flex colum m-top">
         <label className="ingredients">ingredients<span className="required">*</span></label>
-        <input
-          className="newInput"
+        <textarea
+          className="newInput contentflex"
           name="ingredients"
           type="text"
           placeholder="What do we need?"
@@ -98,9 +98,9 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
       </div>
 
       <div className="flex m-top right">
-        <div>
+        <Link to="/feedback">
           <button type="submit">{ <TbSend className="icon"/> }</button>
-        </div>
+        </Link>
 
         <div>
           <Link to="/all-recipes">{ <AiOutlineCloseCircle className="icon"/> }</Link>

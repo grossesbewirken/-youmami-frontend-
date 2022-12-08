@@ -19,6 +19,8 @@ const AllSearchedRecipes = lazy(() => import("./components/AllSearchedRecipes.js
 const OneRecipeBig = lazy(() => import("./components/OneRecipeBig.js"));
 const OneRecipeSmall  = lazy(() => import("./components/OneRecipeSmall.js"))
 const Navigation = lazy(() => import("./components/Navigation.js"));
+const Feedback = lazy(() => import("./components/Feedback.js"))
+
 
 function App() {
   const [isChanged, setIsChanged] = useState(false);
@@ -72,7 +74,7 @@ function App() {
           />} />
           <Route path="/one-recipe-small" element={<OneRecipeSmall />} />
           <Route path="/one-recipe-small-search" element={<OneRecipeSmallSearch />} />
-          
+          <Route path="/feedback" element={<Feedback />} />
           
           {/* <Route path="/navigation" element={<Navigation 
           isChanged={isChanged}

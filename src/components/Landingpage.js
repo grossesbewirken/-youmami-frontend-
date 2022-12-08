@@ -17,6 +17,7 @@ const Landingpage = ({recipesData}) => {
   const recipe = recipesData[[recipesData.length-1]]
   console.log(recipesData);
   return (
+    <div>
     <div className="landing-card">
       <div className="center">
         <h1>Are you hungry?</h1>
@@ -32,6 +33,7 @@ const Landingpage = ({recipesData}) => {
       <div className="flex m-top right">
       <Link to="/one-recipe-big">{ <GrAddCircle className="icon"/> }</Link>
         </div>
+    </div>
     </div>
   );
 };
