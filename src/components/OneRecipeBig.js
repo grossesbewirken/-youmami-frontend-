@@ -2,6 +2,15 @@ import "./OneRecipe.css"
 import { Link } from "react-router-dom";
 
 
+// I M P O R T   F O N T A W E S O M E
+import { GrAddCircle } from 'react-icons/gr';
+import { TbSend } from 'react-icons/tb'
+import { HiMagnifyingGlass } from "react-icons/hi"
+import { AiOutlineCloseCircle } from "react-icons/ai"
+import { GiFireworkRockete } from "react-icons/gi"
+
+
+
 // C O L L A P S E - U M S T Y L E R ???
 
 var coll = document.getElementsByClassName("collapsible");
@@ -32,7 +41,7 @@ const OneRecipeBig = () => {
 
         <div className="flex">
           <h3>ingredients</h3>
-          <button className="collapsible">+</button>
+          <div className="collapsible">{ <GrAddCircle/> }</div>
         </div>
         <div className="content">
           <p className="text">content ingredients</p>
@@ -41,7 +50,7 @@ const OneRecipeBig = () => {
 
         <div className="flex">
           <h3>preparation</h3>
-          <button className="collapsible">+</button>
+          <div className="collapsible">{ <GrAddCircle/> }</div>
         </div>
         <div className="content">
           <p className="text">content preparation</p>
