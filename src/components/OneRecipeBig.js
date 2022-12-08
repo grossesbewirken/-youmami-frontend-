@@ -2,6 +2,15 @@ import "./OneRecipe.css"
 import { Link } from "react-router-dom";
 
 
+// I M P O R T   F O N T A W E S O M E
+import { GrAddCircle } from 'react-icons/gr';
+import { TbSend } from 'react-icons/tb'
+import { HiMagnifyingGlass } from "react-icons/hi"
+import { AiOutlineCloseCircle } from "react-icons/ai"
+import { GiFireworkRockete } from "react-icons/gi"
+
+
+
 // C O L L A P S E - U M S T Y L E R ???
 
 var coll = document.getElementsByClassName("collapsible");
@@ -18,39 +27,39 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-const OneRecipeBig = () => {
+const OneRecipeBig = ({recipesData}) => {
     return (
       <>
 
         <div className="description">
-          <h1 className="rezept">rezeptname</h1>
-          <img src="" alt="tomatensuppe" />
+          <h1 className="rezept">{recipesData.name}</h1>
+          <img src={recipesData.img} alt={recipesData.name} />
           <h3>description</h3>
-          <p className="Beschreibung">content description</p>
+          <p className="Beschreibung">{recipesData.description}n</p>
         </div>
 
 
         <div className="flex">
           <h3>ingredients</h3>
-          <button className="collapsible">+</button>
+          <div className="collapsible">{ <GrAddCircle className="icon"/> }</div>
         </div>
         <div className="content">
-          <p className="text">content ingredients</p>
+          <p className="text">{recipesData.ingredients}</p>
         </div>
 
 
         <div className="flex">
           <h3>preparation</h3>
-          <button className="collapsible">+</button>
+          <div className="collapsible">{ <GrAddCircle className="icon"/> }</div>
         </div>
         <div className="content">
-          <p className="text">content preparation</p>
+          <p className="text">{recipesData.preparation}</p>
         </div>
 
 
         <div className="options">
-          <Link to="/one-recipe-big"><button>open</button></Link>
-          <Link to="/all-recipes"><button>close</button></Link>
+          {/* <Link to="/one-recipe-big"><button>update</button></Link> */}
+          <Link to="/all-recipes">{ <AiOutlineCloseCircle className="icon"/> }</Link>
         </div>
 
 

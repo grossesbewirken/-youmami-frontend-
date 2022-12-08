@@ -3,3 +3,26 @@
     overflow: scroll;
     overflow-x: hidden;
 }
+
+
+
+/* S C R O L L B A L K E N */
+
+/* green */
+section *::-webkit-scrollbar{
+    width: 7px;
+  }
+  /* track */
+  section *::-webkit-scrollbar-track{
+  background: none;
+  width: 9px;
+  }
+  section *::-webkit-scrollbar-track-piece{
+    background-color: rgba(185, 252, 84, 0.1);
+    border-radius: 20px;
+  }
+  /* thumb */
+  section *::-webkit-scrollbar-thumb{
+    background-color: rgb(185, 252, 84);
+    border-radius: 20px;
+  }

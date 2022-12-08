@@ -7,6 +7,15 @@ import { Link } from "react-router-dom";
 import "./NewRecipe.css"
 
 
+// I M P O R T   F O N T A W E S O M E
+import { GrAddCircle } from 'react-icons/gr';
+import { TbSend } from 'react-icons/tb'
+import { HiMagnifyingGlass } from "react-icons/hi"
+import { AiOutlineCloseCircle } from "react-icons/ai"
+import { GiFireworkRockete } from "react-icons/gi"
+
+
+
 // I M P O R T:  F I L E S  &  F U N C T I O N S
 
 const NewRecipes = ({isChanged, setIsChanged}) => {
@@ -90,12 +99,11 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
 
       <div className="flex m-top right">
         <div>
-          <img src="" alt="send" />
-          <button type="submit">send</button>
+          <button type="submit">{ <TbSend className="icon"/> }</button>
         </div>
+
         <div>
-          <img src="" alt="close" />
-          <Link to="/all-recipes"><button>close</button></Link>
+          <Link to="/all-recipes">{ <AiOutlineCloseCircle className="icon"/> }</Link>
         </div>
       </div>
     </form>

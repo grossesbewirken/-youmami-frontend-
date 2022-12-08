@@ -4,6 +4,16 @@ import { Link } from "react-router-dom";
 import "./OneRecipeSmall.css"
 
 
+// I M P O R T   F O N T A W E S O M E
+import { GrAddCircle } from 'react-icons/gr';
+import { TbSend } from 'react-icons/tb'
+import { HiMagnifyingGlass } from "react-icons/hi"
+import { AiOutlineCloseCircle } from "react-icons/ai"
+import { GiFireworkRocket } from "react-icons/gi"
+
+
+
+
 // C O L L A P S E - U M S T Y L E R ???
 
 
@@ -31,7 +41,7 @@ const OneRecipeSmall = ({recipe}) => {
           <p className="Beschreibung">{recipe.description}</p>
           
           <div className="flex m-top right">
-            <Link to="/one-recipe-big"><button>+</button></Link>
+            <Link to="/one-recipe-big">{ <GrAddCircle className="icon"/> }</Link>
           </div>
 
         </div>

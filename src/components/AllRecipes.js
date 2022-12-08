@@ -3,7 +3,7 @@ import "./AllRecipes.css"
 
 function AllRecipes({recipesData}) {
   return (
-    <div className="allRecipesField">
+    <div className="allRecipesField sorts">
       <h1>Get inspired</h1>
       <h3>See all recipes</h3>
       {recipesData.map((recipe, i) => 

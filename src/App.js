@@ -3,12 +3,15 @@ import { lazy, Suspense } from "react";
 import { useState, useEffect } from "react";
 import "./App.css";
 import OneRecipeSmallSearch from "./components/OneRecipeSmallSearch.js";
+
+
 /* import Landingpage from "./components/Landingpage.js";
 import AllRecipes from "./components/AllRecipes.js";
 import NewRecipes from "./components/NewRecipe.js";
 import OneRecipes from "./components/OneRecipe.js";
 import Navigation from "./nav/Navigation.js";
  */
+
 const Landingpage = lazy(() => import("./components/Landingpage.js"));
 const NewRecipes = lazy(() => import("./components/NewRecipe.js"));
 const AllRecipes = lazy(() => import("./components/AllRecipes.js"));
@@ -59,7 +62,9 @@ function App() {
           isChanged={isChanged}
           setIsChanged={setIsChanged}
           />} />
-          <Route path="/one-recipe-big" element={<OneRecipeBig />} />
+          <Route path="/one-recipe-big" element={<OneRecipeBig 
+          recipesData={recipesData}
+                    />} />
           <Route path="/one-recipe-small" element={<OneRecipeSmall />} />
           <Route path="/one-recipe-small-search" element={<OneRecipeSmallSearch />} />
           {/* <Route path="/navigation" element={<Navigation 
