@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 // S T Y L I N G
 import "./Search.css"
 
-
 function Search({ placeholder, list, uniqueId, searchedRecipe, setSearchedRecipe, setLastSearchedRecipe }) {
   
 return (

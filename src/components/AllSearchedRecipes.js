@@ -1,15 +1,10 @@
 import OneRecipeSmallSearch from "./OneRecipeSmallSearch.js";
 import "./AllRecipes.css"
 
-function AllSearchedRecipes({recipesData ,lastSearchedRecipe}) {
+function AllSearchedRecipes({recipesData, lastSearchedRecipe}) {
 
-  const recipesFiltered = recipesData.filter(recipe => {
-    return (
-      recipe.name.toLowerCase().includes(lastSearchedRecipe.toLowerCase())
-    )
-  })
-  // console.log(recipesData);
-  // console.log(recipesFiltered);
+  const recipesFiltered = recipesData.filter(recipe => recipe.name.toLowerCase().includes(lastSearchedRecipe.toLowerCase()))
+
   return (
     <div className="allRecipesField">
       <h1>Get inspired</h1>
@@ -21,7 +16,6 @@ function AllSearchedRecipes({recipesData ,lastSearchedRecipe}) {
       />)
       )}
     </div>
-
   );
 }
 

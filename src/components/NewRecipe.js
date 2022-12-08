@@ -1,5 +1,6 @@
 // I M P O R T:  E X T E R N A L  D E P E N D E N C I E S
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 
 // I M P O R T - S T Y L I N G
@@ -94,7 +95,7 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
         </div>
         <div>
           <img src="" alt="close" />
-          <button>close</button>
+          <Link to="/all-recipes"><button>close</button></Link>
         </div>
       </div>
     </form>

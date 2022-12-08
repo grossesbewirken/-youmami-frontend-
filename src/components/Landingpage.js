@@ -1,6 +1,7 @@
 import React from "react";
 import "./Landingpage.css";
 import "./OneRecipeSmall.css"
+import { Link } from "react-router-dom";
 
 
 const Landingpage = ({recipesData}) => {
@@ -19,7 +20,7 @@ const Landingpage = ({recipesData}) => {
       </div>
 
       <div className="flex m-top right">
-          <button>+</button>
+      <Link to="/one-recipe-big"><button>+</button></Link>
         </div>
     </div>
   );
