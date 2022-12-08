@@ -69,7 +69,9 @@ function App() {
           isChanged={isChanged}
           setIsChanged={setIsChanged}
           />} />
-          <Route path="/one-recipe-big" element={<OneRecipeBig />} />
+          <Route path="/one-recipe-big" element={<OneRecipeBig 
+          recipesData={recipesData}
+                    />} />
           <Route path="/one-recipe-small" element={<OneRecipeSmall />} />
           <Route path="/one-recipe-small-search" element={<OneRecipeSmallSearch />} />
           {/* <Route path="/navigation" element={<Navigation 
