@@ -3,7 +3,13 @@ import "./AllRecipes.css"
 
 function AllSearchedRecipes({recipesData, lastSearchedRecipe}) {
   // console.log(recipesData)
-  const recipesFiltered = recipesData.filter(recipe => recipe.name.toLowerCase().includes(lastSearchedRecipe.toLowerCase()))
+  const recipesFiltered = recipesData.filter(recipe => {
+    return (
+      recipe.name.toLowerCase().includes(lastSearchedRecipe.toLowerCase()) ||
+      recipe.description.toLowerCase().includes(lastSearchedRecipe.toLowerCase()) ||
+      recipe.preparation.toLowerCase().includes(lastSearchedRecipe.toLowerCase())
+    )
+  })
 
   return (
     <div className="allRecipesField">
