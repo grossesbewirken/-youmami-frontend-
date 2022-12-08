@@ -15,7 +15,6 @@ import { GiFireworkRockete } from "react-icons/gi"
 
 const Landingpage = ({recipesData}) => {
   const recipe = recipesData[[recipesData.length-1]]
-  console.log(recipesData);
   return (
     <div>
     <div className="landing-card">
@@ -31,7 +30,7 @@ const Landingpage = ({recipesData}) => {
       </div>
 
       <div className="flex m-top right">
-      <Link to="/one-recipe-big">{ <GrAddCircle className="icon"/> }</Link>
+      <Link to={`/one-recipe-big/${recipe._id}`}>{ <GrAddCircle className="icon"/> }</Link>
         </div>
     </div>
     </div>

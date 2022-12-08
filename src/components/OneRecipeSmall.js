@@ -33,7 +33,6 @@ for (i = 0; i < coll.length; i++) {
 }
 
 const OneRecipeSmall = ({recipe}) => {
-  console.log(recipe._id);
       return (
       <>
         <div className="description">
