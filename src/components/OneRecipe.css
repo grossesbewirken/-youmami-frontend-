@@ -1,20 +1,13 @@
-.collapsible {
-    cursor: pointer;
-    padding: 20px;
-    width: 100%;
-    border: none;
-    font-size: 15px;
-    text-align: center;
-  }
+.showIngredients {
+  display: none;
+}
 
-  .content {
-    text-align: center;
-    padding: 0 18px;
-    display: none;
-    /* height: 100vh; */
-    background: grey;
-    color: black;
-  }
+.showPreparations {
+  display: none;
+}
+
+
+
   .text{
     text-align: center;
   }

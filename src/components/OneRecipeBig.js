@@ -31,36 +31,45 @@ for (i = 0; i < coll.length; i++) {
 
 const OneRecipeBig = ({recipesData}) => {
   const {_id} = useParams();
-  const currRecipe = 
-    recipesData.find(recipe => recipe._id === _id)
-  
-  console.log(recipesData);
-  console.log(_id);
-  console.log(currRecipe);
+  const currRecipe = recipesData.find(recipe => recipe._id === _id);
+  const [ingredientsToggle, setIngredientsToggle] = useState(false);
+  const showIngredients = () => {
+    setIngredientsToggle(!ingredientsToggle)
+  }
+
+  const [preparationsToggle, setPreparationsToggle] = useState(false);
+  const showPreparation = () => {
+    setPreparationsToggle(!preparationsToggle)
+  }
+
   return (
     <>
 
-      <div className="description">
-        <h1 className="rezept">{currRecipe.name}</h1>
+      <div >
+        <h1 >{currRecipe.name}</h1>
         <img src={currRecipe.img} alt={currRecipe.name} />
         <h3>description</h3>
-        <p className="Beschreibung">{currRecipe.description}n</p>
+        <p >{currRecipe.description}n</p>
       </div>
 
       <div className="flex">
         <h3>ingredients</h3>
-        <div className="collapsible">{ <GrAddCircle className="icon"/> }</div>
+        <div 
+        onClick={showIngredients}
+        >{ <GrAddCircle className="icon"/> }</div>
       </div>
-      <div className="content">
-        <p className="text">{currRecipe.ingredients}</p>
+      <div className={!ingredientsToggle ? "showIngredients" : ""}>
+        <p >{currRecipe.ingredients}</p>
       </div>
 
       <div className="flex">
         <h3>preparation</h3>
-        <div className="collapsible">{ <GrAddCircle className="icon"/> }</div>
+        <div 
+        onClick={showPreparation}
+        >{ <GrAddCircle className="icon"/> }</div>
       </div>
-      <div className="content">
-        <p className="text">{currRecipe.preparation}</p>
+      <div className={!preparationsToggle ? "showPreparations" : ""}>
+        <p >{currRecipe.preparation}</p>
       </div>
 
 
