@@ -1,26 +1,36 @@
-import { useState } from "react";
+// import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // S T Y L I N G
 import "./Search.css"
 
 
-function Search({ placeholder, list, uniqueId }) {
-const [inputValue, setInputValue] = useState("");
+function Search({ placeholder, list, uniqueId, searchedRecipe, setSearchedRecipe, setLastSearchedRecipe }) {
+  
 return (
     <div className="searchField-small">
       <input
-        placeholder={placeholder || "select item"}
-        list="opts"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        placeholder="search recipe"
+        // list="opts"
+        value={searchedRecipe}
+        onChange={(e) => setSearchedRecipe(e.target.value)}
       />
-      <datalist id="opts">
+      <Link to="/all-searched-recipes">
+        <button
+        className="button"
+        onClick={(e) => {
+          e.preventDefault();
+          setLastSearchedRecipe(searchedRecipe)
+        }}
+        >search</button>      
+      </Link>
+      {/* <datalist id="opts">
         {list.map((item, index) => (
           <option key={item.id || uniqueId || index} value={item}>
             {item}
           </option>
         ))}
-      </datalist>
+      </datalist> */}
     </div>
 );
 }

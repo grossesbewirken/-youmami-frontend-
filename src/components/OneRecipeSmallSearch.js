@@ -22,7 +22,7 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-const OneRecipeSmall = ({recipe}) => {
+const OneRecipeSmallSearch = ({recipe}) => {
     return (
       <>
         <div className="description">
@@ -32,6 +32,7 @@ const OneRecipeSmall = ({recipe}) => {
           
           <div className="flex m-top right">
             <Link to="/one-recipe-big"><button>+</button></Link>
+
           </div>
 
         </div>
@@ -39,4 +40,4 @@ const OneRecipeSmall = ({recipe}) => {
     );
   }
   
-  export default OneRecipeSmall;
+  export default OneRecipeSmallSearch;
