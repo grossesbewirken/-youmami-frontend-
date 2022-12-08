@@ -1,6 +1,6 @@
 // I M P O R T:  E X T E R N A L  D E P E N D E N C I E S
 import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 // I M P O R T - S T Y L I N G
@@ -15,16 +15,17 @@ import { AiOutlineCloseCircle } from "react-icons/ai"
 import { GiFireworkRockete } from "react-icons/gi"
 
 
-
 // I M P O R T:  F I L E S  &  F U N C T I O N S
 
 const NewRecipes = ({isChanged, setIsChanged}) => {
   const [formData, setFormData] = useState({});
-
+  const navigate = useNavigate();
+  
   const onChangeHandler = (e) => {
     setFormData((prev => prev = {...prev, [e.target.name]:e.target.value}))
   }
 
+// console.log(formData);
   const handleSubmit = (e)=>  {
     e.preventDefault();
     fetch("http://localhost:9876/recipes", {
@@ -35,7 +36,9 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
       } 
     })
     .then((response) => response.json())
-    .then(() => setIsChanged(!isChanged))
+    .then(() => {setIsChanged(!isChanged);
+      navigate("/feedback")
+    })
   }
   
   return (
@@ -98,9 +101,11 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
       </div>
 
       <div className="flex m-top right">
-        <Link to="/feedback">
-          <button type="submit">{ <TbSend className="icon"/> }</button>
-        </Link>
+        {/* <Link to="/feedback"> */}
+          <button type="submit"
+          
+          >{ <TbSend className="icon"/> }</button>
+        {/* </Link> */}
 
         <div>
           <Link to="/all-recipes">{ <AiOutlineCloseCircle className="icon"/> }</Link>

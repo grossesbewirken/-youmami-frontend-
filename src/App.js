@@ -34,7 +34,7 @@ function App() {
       .then((response) => response.json())
       .then((json) => setRecipesData(json))
   }, [isChanged]);
-  // console.log(recipesData);
+
   
   return (
   <BrowserRouter>
