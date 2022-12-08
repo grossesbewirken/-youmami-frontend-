@@ -32,13 +32,16 @@ function App() {
       .then((response) => response.json())
       .then((json) => setRecipesData(json))
   }, [isChanged]);
-  // console.log(recipesData);
+  console.log(recipesData);
   
   return (
   <BrowserRouter>
   <div className="bg">
     <div className="phone">
       <Suspense fallback={<p>Loading...</p>}>
+      {recipesData.length > 0 && 
+      (  
+      <>
       <Navigation 
           recipesData={recipesData}
           searchedRecipe={searchedRecipe}
@@ -47,6 +50,8 @@ function App() {
           setLastSearchedRecipe={setLastSearchedRecipe}
       />
         <Routes>
+        
+        
         <Route path="*" element={<Navigate to="/"/>}/>
           <Route path="/" element={<Landingpage 
           recipesData={recipesData}
@@ -62,16 +67,20 @@ function App() {
           isChanged={isChanged}
           setIsChanged={setIsChanged}
           />} />
-          <Route path="/one-recipe-big" element={<OneRecipeBig 
+          <Route path="/one-recipe-big/:_id" element={<OneRecipeBig 
           recipesData={recipesData}
-                    />} />
+          />} />
           <Route path="/one-recipe-small" element={<OneRecipeSmall />} />
           <Route path="/one-recipe-small-search" element={<OneRecipeSmallSearch />} />
+          
+          
           {/* <Route path="/navigation" element={<Navigation 
           isChanged={isChanged}
           setRecipesData={setRecipesData}
           // />} /> */}
         </Routes>
+        </>
+        )}
       </Suspense>
     </div>
   </div>

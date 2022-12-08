@@ -33,7 +33,8 @@ for (i = 0; i < coll.length; i++) {
 }
 
 const OneRecipeSmall = ({recipe}) => {
-    return (
+  console.log(recipe._id);
+      return (
       <>
         <div className="description">
           <h2 className="rezept">{recipe.name}</h2>
@@ -41,9 +42,8 @@ const OneRecipeSmall = ({recipe}) => {
           <p className="Beschreibung">{recipe.description}</p>
           
           <div className="flex m-top right">
-            <Link to="/one-recipe-big">{ <GrAddCircle className="icon"/> }</Link>
+            <Link to={`/one-recipe-big/${recipe._id}`}>{ <GrAddCircle className="icon"/> }</Link>
           </div>
-
         </div>
       </>
     );

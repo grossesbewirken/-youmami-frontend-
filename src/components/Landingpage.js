@@ -15,6 +15,7 @@ import { GiFireworkRockete } from "react-icons/gi"
 
 const Landingpage = ({recipesData}) => {
   const recipe = recipesData[[recipesData.length-1]]
+  console.log(recipesData);
   return (
     <div className="landing-card">
       <div className="center">

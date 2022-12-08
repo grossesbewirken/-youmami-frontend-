@@ -4,11 +4,11 @@ import Search from "./Search.js";
 
 
 // I M P O R T   F O N T A W E S O M E
-import { GrAddCircle } from 'react-icons/gr';
-import { TbSend } from 'react-icons/tb'
-import { HiMagnifyingGlass } from "react-icons/hi"
-import { AiOutlineCloseCircle } from "react-icons/ai"
-import { GiFireworkRockete } from "react-icons/gi"
+// import { GrAddCircle } from 'react-icons/gr';
+// import { TbSend } from 'react-icons/tb'
+// import { HiMagnifyingGlass } from "react-icons/hi"
+// import { AiOutlineCloseCircle } from "react-icons/ai"
+// import { GiFireworkRockete } from "react-icons/gi"
 
 
 function Navbar({ 
