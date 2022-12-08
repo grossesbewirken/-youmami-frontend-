@@ -19,27 +19,20 @@ const Navigation = lazy(() => import("./components/Navigation.js"));
 
 function App() {
   const [isChanged, setIsChanged] = useState(false);
-  const [recipesData, setRecipesData] = useState([{}]);
+  const [recipesData, setRecipesData] = useState([]);
   const [searchedRecipe, setSearchedRecipe] = useState(''); 
   const [lastSearchedRecipe, setLastSearchedRecipe] = useState('');
   
-  // useEffect for all recipes at every root of the page
-  useEffect(() => {
-    fetch("http://localhost:9876/recipes")
-      .then((response) => response.json())
-      .then((json) => setRecipesData(prev => prev = json));
-  }, []);
-
   // useEffect for all recipes if something is new added
   useEffect(() => {
     fetch("http://localhost:9876/recipes")
       .then((response) => response.json())
-      .then((json) => setRecipesData(prev => prev = json));
+      .then((json) => setRecipesData(json))
   }, [isChanged]);
+  // console.log(recipesData);
   
   return (
   <BrowserRouter>
-
   <div className="bg">
     <div className="phone">
       <Suspense fallback={<p>Loading...</p>}>

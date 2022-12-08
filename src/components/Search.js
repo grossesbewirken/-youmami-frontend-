@@ -18,7 +18,6 @@ return (
         <button
         className="button"
         onClick={(e) => {
-          e.preventDefault();
           setLastSearchedRecipe(searchedRecipe)
         }}
         >search</button>      

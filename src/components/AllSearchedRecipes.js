@@ -2,7 +2,7 @@ import OneRecipeSmallSearch from "./OneRecipeSmallSearch.js";
 import "./AllRecipes.css"
 
 function AllSearchedRecipes({recipesData, lastSearchedRecipe}) {
-
+  // console.log(recipesData)
   const recipesFiltered = recipesData.filter(recipe => recipe.name.toLowerCase().includes(lastSearchedRecipe.toLowerCase()))
 
   return (
