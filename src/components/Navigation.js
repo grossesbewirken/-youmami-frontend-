@@ -10,7 +10,7 @@ function Navbar({ recipesData }) {
       <div className="Logo middle">
         <Link to="/">
           {" "}
-          <img src="" alt="Logo" />
+          <h1 className="youmami umami">youmami</h1>
         </Link>
       </div>
 
