@@ -27,15 +27,15 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-const OneRecipeBig = () => {
+const OneRecipeBig = ({recipesData}) => {
     return (
       <>
 
         <div className="description">
-          <h1 className="rezept">rezeptname</h1>
-          <img src="" alt="tomatensuppe" />
+          <h1 className="rezept">{recipesData.name}</h1>
+          <img src={recipesData.img} alt={recipesData.name} />
           <h3>description</h3>
-          <p className="Beschreibung">content description</p>
+          <p className="Beschreibung">{recipesData.description}n</p>
         </div>
 
 
@@ -44,7 +44,7 @@ const OneRecipeBig = () => {
           <div className="collapsible">{ <GrAddCircle className="icon"/> }</div>
         </div>
         <div className="content">
-          <p className="text">content ingredients</p>
+          <p className="text">{recipesData.ingredients}</p>
         </div>
 
 
@@ -53,7 +53,7 @@ const OneRecipeBig = () => {
           <div className="collapsible">{ <GrAddCircle className="icon"/> }</div>
         </div>
         <div className="content">
-          <p className="text">content preparation</p>
+          <p className="text">{recipesData.preparation}</p>
         </div>
 
 
