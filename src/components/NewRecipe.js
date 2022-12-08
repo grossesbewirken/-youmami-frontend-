@@ -1,5 +1,6 @@
 // I M P O R T:  E X T E R N A L  D E P E N D E N C I E S
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 
 // I M P O R T - S T Y L I N G
@@ -32,8 +33,8 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
     <form onSubmit={handleSubmit}>
       <h1>Create a recipe</h1>
       <h3>Share your taste!</h3>
-      <div class="flex colum">
-        <label for="name">name<span className="required">*</span></label>
+      <div className="flex colum">
+        <label className="name">name<span className="required">*</span></label>
         <input
           className="newInput"
           name="name"
@@ -44,7 +45,7 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
       </div>
 
       <div className="flex colum m-top">
-        <label for="img">image</label>
+        <label className="img">image</label>
         <input
           className="newInput"
           name="img"
@@ -55,10 +56,10 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
       </div>
 
       <div className="flex colum m-top">
-        <label for="description">description<span className="required">*</span></label>
+        <label className="description">description<span className="required">*</span></label>
         <input
           className="newInput"
-          nameName="description"
+          name="description"
           type="text"
           placeholder="Describe your recipe" 
           onChange={onChangeHandler}
@@ -66,7 +67,7 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
       </div>
 
       <div className="flex colum m-top">
-        <label for="ingredients">ingredients<span className="required">*</span></label>
+        <label className="ingredients">ingredients<span className="required">*</span></label>
         <input
           className="newInput"
           name="ingredients"
@@ -77,7 +78,7 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
       </div>
 
       <div className="flex colum m-top">
-        <label for="preparation">preparation<span className="required">*</span></label>
+        <label className="preparation">preparation<span className="required">*</span></label>
         <input
           className="newInput"
           name="preparation"
@@ -94,7 +95,7 @@ const NewRecipes = ({isChanged, setIsChanged}) => {
         </div>
         <div>
           <img src="" alt="close" />
-          <button>close</button>
+          <Link to="/all-recipes"><button>close</button></Link>
         </div>
       </div>
     </form>

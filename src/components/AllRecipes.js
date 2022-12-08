@@ -6,7 +6,7 @@ function AllRecipes({recipesData}) {
     <div className="allRecipesField sorts">
       <h1>Get inspired</h1>
       <h3>See all recipes</h3>
-      {recipesData && recipesData.map((recipe, i) => 
+      {recipesData.map((recipe, i) => 
       (<OneRecipeSmall 
       recipe={recipe}
       key={i}

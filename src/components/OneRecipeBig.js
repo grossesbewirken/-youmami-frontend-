@@ -1,4 +1,5 @@
 import "./OneRecipe.css"
+import { Link } from "react-router-dom";
 
 
 // C O L L A P S E - U M S T Y L E R ???
@@ -17,42 +18,39 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-
-//
-
 const OneRecipeBig = () => {
     return (
       <>
 
         <div className="description">
-          <h1 class="rezept">rezeptname</h1>
+          <h1 className="rezept">rezeptname</h1>
           <img src="" alt="tomatensuppe" />
           <h3>description</h3>
-          <p class="Beschreibung">content description</p>
+          <p className="Beschreibung">content description</p>
         </div>
 
 
         <div className="flex">
           <h3>ingredients</h3>
-          <button class="collapsible">+</button>
+          <button className="collapsible">+</button>
         </div>
-        <div class="content">
-          <p class="text">content ingredients</p>
+        <div className="content">
+          <p className="text">content ingredients</p>
         </div>
 
 
         <div className="flex">
           <h3>preparation</h3>
-          <button class="collapsible">+</button>
+          <button className="collapsible">+</button>
         </div>
-        <div class="content">
-          <p class="text">content preparation</p>
+        <div className="content">
+          <p className="text">content preparation</p>
         </div>
 
 
         <div className="options">
-          <button>open</button>
-          <button>close</button>
+          <Link to="/one-recipe-big"><button>open</button></Link>
+          <Link to="/all-recipes"><button>close</button></Link>
         </div>
 
 
