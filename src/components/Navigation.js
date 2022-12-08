@@ -2,6 +2,15 @@ import "./Navigation.css";
 import { Link } from "react-router-dom";
 import Search from "./Search.js";
 
+
+// I M P O R T   F O N T A W E S O M E
+import { GrAddCircle } from 'react-icons/gr';
+import { TbSend } from 'react-icons/tb'
+import { HiMagnifyingGlass } from "react-icons/hi"
+import { AiOutlineCloseCircle } from "react-icons/ai"
+import { GiFireworkRockete } from "react-icons/gi"
+
+
 function Navbar({ 
   searchedRecipe, 
   setSearchedRecipe,
@@ -28,7 +37,6 @@ function Navbar({
           </li>
           <li >
             <Search
-              placeholder="search"
               searchedRecipe={searchedRecipe}
               setSearchedRecipe={setSearchedRecipe} 
               setLastSearchedRecipe={setLastSearchedRecipe}

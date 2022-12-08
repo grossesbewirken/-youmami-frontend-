@@ -53,11 +53,10 @@
 }
 
 button{
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+    background-color: rgba(0,0,0,0);
+    border: rgba(0,0,0,0);
+    text-decoration: none;
 }
-
 
 
 /* F O N T S */
@@ -119,3 +118,11 @@ a:active {
 .umami{
     color: rgba(75, 150, 0, 1)
 }
+
+
+/* I C O N S*/
+.icon{
+    font-size: 1.7rem;
+    margin-left: 1rem
+}
+

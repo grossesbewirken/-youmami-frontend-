@@ -41,7 +41,7 @@ const OneRecipeBig = () => {
 
         <div className="flex">
           <h3>ingredients</h3>
-          <div className="collapsible">{ <GrAddCircle/> }</div>
+          <div className="collapsible">{ <GrAddCircle className="icon"/> }</div>
         </div>
         <div className="content">
           <p className="text">content ingredients</p>
@@ -50,7 +50,7 @@ const OneRecipeBig = () => {
 
         <div className="flex">
           <h3>preparation</h3>
-          <div className="collapsible">{ <GrAddCircle/> }</div>
+          <div className="collapsible">{ <GrAddCircle className="icon"/> }</div>
         </div>
         <div className="content">
           <p className="text">content preparation</p>
@@ -58,8 +58,8 @@ const OneRecipeBig = () => {
 
 
         <div className="options">
-          <Link to="/one-recipe-big">{ <TbSend/> }</Link>
-          <Link to="/all-recipes">{ <AiOutlineCloseCircle/> }</Link>
+          {/* <Link to="/one-recipe-big"><button>update</button></Link> */}
+          <Link to="/all-recipes">{ <AiOutlineCloseCircle className="icon"/> }</Link>
         </div>
 
 

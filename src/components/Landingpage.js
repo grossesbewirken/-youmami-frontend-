@@ -29,7 +29,7 @@ const Landingpage = ({recipesData}) => {
       </div>
 
       <div className="flex m-top right">
-      <Link to="/one-recipe-big">{ <GrAddCircle/> }</Link>
+      <Link to="/one-recipe-big">{ <GrAddCircle className="icon"/> }</Link>
         </div>
     </div>
   );
